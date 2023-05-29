@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import resource from "./resources/resource_en.json"
+import Typography from '@mui/material/Typography';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Typography color={"white"} variant='h1'>{resource["IDS_COMING_SOON"]}</Typography>
+    </AppContainer>
   );
 }
 
 export default App;
+
+const AppContainer = styled.div`
+  height:100vh;
+  width:100vw;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
