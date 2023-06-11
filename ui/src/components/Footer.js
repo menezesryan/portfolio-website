@@ -5,7 +5,7 @@ import resource from "../resources/resource_en.json"
 function Footer() {
     return (
         <Container>
-            {resource["IDS_COMING_SOON"]}
+
         </Container>
     )
 
