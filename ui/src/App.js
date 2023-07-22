@@ -16,9 +16,9 @@ function App(props) {
 export default App;
 
 const AppContainer = styled(Box)`
-  height:100vh;
-  width:100vw;
-  // background-color: #000;
+  min-height:100vh;
+  min-width:100vw;
+  background-color: #0a192f;
   display: flex;
   flex-direction:column;
   justify-content: center;
