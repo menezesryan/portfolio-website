@@ -18,12 +18,12 @@ jobs:
         node-version: 18.16.0 # Project's Node.js version
 
     - name: Install Dependencies
-      run: 
+      run: |
         cd ui
         npm install
 
     - name: Build Project
-      run: 
+      run: |
         cd ui
         npm run build # Change this to the build script for your React project with the appropriate subdirectory (ui in this case)
 
