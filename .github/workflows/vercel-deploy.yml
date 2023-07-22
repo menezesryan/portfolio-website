@@ -1,0 +1,30 @@
+name: Deploy to Vercel
+on:
+  push:
+    branches:
+      - V1.0 # Branch name for which actions should trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 18.16.0 # Project's Node.js version
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Project
+      run: npm run build --prefix ui # Change this to the build script for your React project with the appropriate subdirectory (ui in this case)
+
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v2
+      with:
+        token: ${{ secrets.VERCEL_TOKEN }} # Add the Vercel token as a GitHub secret in your repository settings
+        args: 'ui/build' # Change this to the path of the build folder of your React project within the subdirectory (ui/build in this case)
