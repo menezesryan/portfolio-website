@@ -19,8 +19,5 @@ const AppContainer = styled(Box)`
   min-height:100vh;
   min-width:100vw;
   background-color: #0a192f;
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
+
 `
